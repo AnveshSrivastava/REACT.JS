@@ -23,7 +23,7 @@ export default function TextForm() {
     <div>
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
-          Example textarea
+          Anvesh textarea
         </label>
         <textarea
           className="form-control"
@@ -40,6 +40,12 @@ export default function TextForm() {
         </button>
         <button className='btn btn-primary my-3 mx-3' onClick={() => setText("")}> Clear Text</button>
         <button className='btn btn-primary my-3 mx-3' onClick={handleExtraSpaces}> Remove Extra Spaces</button>
+      </div>
+
+      <div className='container my-3'>
+        <p>{text.split(" ").length} words and {text.length} characters</p>
+        <p>{0.0008*text.split(" ").length} Minutes</p>
+
       </div>
     </div>
   );
